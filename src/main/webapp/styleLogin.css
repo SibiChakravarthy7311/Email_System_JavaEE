@@ -1,0 +1,97 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    background: radial-gradient(#7c83e6, #240295);
+    height: 100vh;
+}
+
+/*#2D4049*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0vh 0;
+    transform: translateY(20vh);
+}
+
+.create_account {
+    text-align: center;
+}
+
+.create_account h1 {
+    color: rgba(255, 202, 59, 0.88);
+}
+
+label {
+    display: block;
+}
+
+.sign_in {
+    border: 1px solid black;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: aliceblue;
+}
+
+.sign_in div {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+
+}
+
+.sign_in label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.sign_in input {
+    font-size: 1.3rem;
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 2px solid black;
+}
+
+.btn {
+    text-align: center;
+}
+
+.btn button {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.6rem;
+    margin-top: 1rem;
+    background-color: rgba(239, 179, 20, 0.88);
+    border-radius: 1rem;
+    color: #fff;
+    border: 1px solid #a0a029;
+    cursor: pointer;
+}
+
+button:hover,
+button:active{
+    background-color: rgba(242, 164, 74, 0.88);
+}
+
+a:link,
+a:visited{
+    color: rgba(242, 164, 74, 0.88);
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid rgba(198, 149, 19, 0.88);
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active{
+    color: rgba(255, 214, 107, 0.88);
+    border-bottom: 1px solid transparent;
+}
+
+p{
+    text-align: center;
+    color: aliceblue;
+}
+
+
+

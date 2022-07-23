@@ -1,0 +1,516 @@
+/*!**/
+/*To change this license header, choose License Headers in Project Properties.*/
+/*To change this template file, choose Tools | Templates*/
+/*and open the template in the editor.*/
+/**!*/
+/*!**/
+/*    Created on : 16-Sep-2021, 7:04:16 pm*/
+/*    Author     : cibip*/
+/**!*/
+
+/*body {*/
+/*    font-family: "Open Sans", sans-serif;*/
+/*    background: radial-gradient(#7c83e6, #240295);*/
+/*    height: 100vh;*/
+/*}*/
+
+/*.container {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    margin: 0vh 0;*/
+/*    transform: translateY(10vh);*/
+/*}*/
+
+/*.create_account {*/
+/*    text-align: center;*/
+/*}*/
+
+/*.create_account h1 {*/
+/*    color: rgba(255, 202, 59, 0.88);*/
+/*}*/
+
+/*label {*/
+/*    display: block;*/
+/*}*/
+
+/*.sign_in {*/
+/*    border: 1px solid black;*/
+/*    padding: 2rem;*/
+/*    border-radius: 1rem;*/
+/*    background-color: aliceblue;*/
+/*}*/
+
+/*.sign_in div {*/
+/*    margin: 0.5rem 0;*/
+/*    font-size: 1rem;*/
+/*}*/
+
+/*.sign_in label {*/
+/*    margin-bottom: 0.5rem;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.sign_in input {*/
+/*    font-size: 1.3rem;*/
+/*    border-radius: 10px;*/
+/*    padding: 0.5rem;*/
+/*    border: 2px solid black;*/
+/*}*/
+
+/*.btn {*/
+/*    text-align: center;*/
+/*}*/
+
+/*.btn button {*/
+/*    width: 100%;*/
+/*    font-size: 1.2rem;*/
+/*    padding: 0.6rem;*/
+/*    margin-top: 1rem;*/
+/*    background-color: rgba(239, 179, 20, 0.88);*/
+/*    border-radius: 1rem;*/
+/*    color: #fff;*/
+/*    border: 1px solid #a0a029;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*button:hover,*/
+/*button:active{*/
+/*    background-color: rgba(242, 164, 74, 0.88);*/
+/*}*/
+
+/*a:link,*/
+/*a:visited{*/
+/*    color: rgba(242, 164, 74, 0.88);*/
+/*    text-decoration: none;*/
+/*    padding-bottom: 1px;*/
+/*    border-bottom: 1px solid rgba(198, 149, 19, 0.88);*/
+/*    transition: border-bottom 0.2s, color 0.2s;*/
+/*}*/
+
+/*a:hover,*/
+/*a:active{*/
+/*    color: rgba(255, 214, 107, 0.88);*/
+/*    border-bottom: 1px solid transparent;*/
+/*}*/
+
+/*p{*/
+/*    text-align: center;*/
+/*    color: aliceblue;*/
+/*}*/
+
+
+
+
+/*.successNotification {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background-color: rgba(0, 0, 0, 0.2);*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    justify-content: center;*/
+/*    display: flex;*/
+/*}*/
+
+/*.successNotification-content {*/
+/*    transform: translateY(50%);*/
+/*    height: 12.6%;*/
+/*    background-color: white;*/
+/*    margin-bottom: -1.5%;*/
+/*    position: relative;*/
+/*    border-radius: 20px;*/
+/*}*/
+
+/*.successNotification-status {*/
+/*    text-align: center;*/
+/*    margin-top: -5.5%;*/
+/*}*/
+
+/*.successNotification-status h1 {*/
+/*    color: #08680c;*/
+/*    border-bottom: 2px solid #043907;*/
+/*}*/
+
+/*.successMessage {*/
+/*    border: 1px solid black transparent;*/
+/*    padding: 0.25rem 2rem;*/
+/*    border-bottom-left-radius: 1rem;*/
+/*    border-bottom-right-radius: 1rem;*/
+/*    background-color: #e8fde9;*/
+/*    margin-top: -7%;*/
+/*}*/
+
+/*.successMessage h3 {*/
+/*    color: #032905;*/
+/*    margin-top: 3%;*/
+/*}*/
+
+/*.successNotification button {*/
+/*    text-align: center;*/
+/*}*/
+
+/*.successNotification button {*/
+/*    width: 100%;*/
+/*    font-size: 0.9rem;*/
+/*    font-weight: bold;*/
+/*    padding: 0.3rem;*/
+/*    background-color: #0da713;*/
+/*    border-radius: 5px;*/
+/*    color: #fff;*/
+/*    border: 1px solid #032905;*/
+/*    cursor: pointer;*/
+/*    margin-top: -3%;*/
+/*}*/
+
+/*.successNotification button:hover,*/
+/*.successNotification button:active {*/
+/*    background-color: #08680c;*/
+/*}*/
+
+
+
+/*.warningNotification {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background-color: rgba(0, 0, 0, 0.2);*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    justify-content: center;*/
+/*    display: flex;*/
+/*}*/
+
+/*.warningNotification-content {*/
+/*    transform: translateY(50%);*/
+/*    height: 12%;*/
+/*    background-color: white;*/
+/*    margin-bottom: -1.5%;*/
+/*    position: relative;*/
+/*    border-radius: 20px;*/
+/*}*/
+
+/*.warningNotification-status {*/
+/*    text-align: center;*/
+/*    margin-top: -5.5%;*/
+/*}*/
+
+/*.warningNotification-status h1 {*/
+/*    color: #fecf1f;*/
+/*    border-bottom: 2px solid #c79e01;*/
+/*}*/
+
+/*.warningMessage {*/
+/*    border: 1px solid black transparent;*/
+/*    padding: 0.25rem 2rem;*/
+/*    border-bottom-left-radius: 1rem;*/
+/*    border-bottom-right-radius: 1rem;*/
+/*    background-color: #fff7d9;*/
+/*    margin-top: -6%;*/
+/*}*/
+
+/*.warningMessage h3 {*/
+/*    color: #624d00;*/
+/*    margin-top: 2.7%;*/
+/*}*/
+
+/*.warningNotification button {*/
+/*    text-align: center;*/
+/*}*/
+
+/*.warningNotification button {*/
+/*    width: 100%;*/
+/*    font-size: 0.9rem;*/
+/*    font-weight: bold;*/
+/*    padding: 0.3rem;*/
+/*    background-color: #fed741;*/
+/*    border-radius: 5px;*/
+/*    color: #fff;*/
+/*    border: 1px solid #b69001;*/
+/*    cursor: pointer;*/
+/*    margin-top: -3%;*/
+/*}*/
+
+/*.warningNotification button:hover,*/
+/*.warningNotification button:active {*/
+/*    background-color: #e9b901;*/
+/*}*/
+
+
+
+/*.warningNotification .btn,*/
+/*.successNotification .btn {*/
+/*    display: flex;*/
+/*    flex: 1;*/
+/*    justify-content: right;*/
+/*}*/
+
+/*.warningNotification .btn button,*/
+/*.successNotification .btn button {*/
+/*    flex: 0.4;*/
+/*}*/
+
+/*.warningNotification .close,*/
+/*.successNotification .close {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 1%;*/
+/*    font-size: 4.5vh;*/
+/*    transform: rotate(45deg);*/
+/*    font-weight: bold;*/
+/*    cursor: pointer;*/
+/*    margin-top: -1%;*/
+/*}*/
+
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background: radial-gradient(#7c83e6, #240295);
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0vh 0;
+    transform: translateY(10vh);
+}
+
+.create_account {
+    text-align: center;
+}
+
+.create_account h1 {
+    color: rgba(255, 202, 59, 0.88);
+}
+
+label {
+    display: block;
+}
+
+.sign_in {
+    border: 1px solid black;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: aliceblue;
+}
+
+.sign_in div {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.sign_in label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.sign_in input {
+    font-size: 1.3rem;
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 2px solid black;
+}
+
+.btn {
+    text-align: center;
+}
+
+.btn button {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.6rem;
+    margin-top: 1rem;
+    background-color: rgba(239, 179, 20, 0.88);
+    border-radius: 1rem;
+    color: #fff;
+    border: 1px solid #a0a029;
+    cursor: pointer;
+}
+
+button:hover,
+button:active{
+    background-color: rgba(242, 164, 74, 0.88);
+}
+
+a:link,
+a:visited{
+    color: rgba(242, 164, 74, 0.88);
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid rgba(198, 149, 19, 0.88);
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active{
+    color: rgba(255, 214, 107, 0.88);
+    border-bottom: 1px solid transparent;
+}
+
+p{
+    text-align: center;
+    color: aliceblue;
+}
+
+
+
+
+.successNotification {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    display: flex;
+}
+
+.successNotification-content {
+    transform: translateY(50%);
+    height: 12.6%;
+    background-color: white;
+    margin-bottom: -1.5%;
+    position: relative;
+    border-radius: 20px;
+}
+
+.successNotification-status {
+    text-align: center;
+    margin-top: -5.5%;
+}
+
+.successNotification-status h1 {
+    color: #08680c;
+    border-bottom: 2px solid #043907;
+}
+
+.successMessage {
+    border: 1px solid transparent;
+    padding: 0.25rem 2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: #e8fde9;
+    margin-top: -7%;
+}
+
+.successMessage h3 {
+    color: #032905;
+    margin-top: 3%;
+}
+
+.successNotification button {
+    text-align: center;
+}
+
+.successNotification button {
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.3rem;
+    background-color: #0da713;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid #032905;
+    cursor: pointer;
+    margin-top: -3%;
+}
+
+.successNotification button:hover,
+.successNotification button:active {
+    background-color: #08680c;
+}
+
+
+
+.warningNotification {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    display: flex;
+}
+
+.warningNotification-content {
+    transform: translateY(50%);
+    height: 12%;
+    background-color: white;
+    margin-bottom: -1.5%;
+    position: relative;
+    border-radius: 20px;
+}
+
+.warningNotification-status {
+    text-align: center;
+    margin-top: -5.5%;
+}
+
+.warningNotification-status h1 {
+    color: #fecf1f;
+    border-bottom: 2px solid #c79e01;
+}
+
+.warningMessage {
+    border: 1px solid transparent;
+    padding: 0.25rem 2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: #fff7d9;
+    margin-top: -6%;
+}
+
+.warningMessage h3 {
+    color: #624d00;
+    margin-top: 2.7%;
+}
+
+.warningNotification button {
+    text-align: center;
+}
+
+.warningNotification button {
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.3rem;
+    background-color: #fed741;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid #b69001;
+    cursor: pointer;
+    margin-top: -3%;
+}
+
+.warningNotification button:hover,
+.warningNotification button:active {
+    background-color: #e9b901;
+}
+
+
+
+.warningNotification .btn,
+.successNotification .btn {
+    display: flex;
+    flex: 1;
+    justify-content: right;
+}
+
+.warningNotification .btn button,
+.successNotification .btn button {
+    flex: 0.4;
+}
+
+.warningNotification .close,
+.successNotification .close {
+    position: absolute;
+    top: 0;
+    right: 1%;
+    font-size: 4.5vh;
+    transform: rotate(45deg);
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -1%;
+}

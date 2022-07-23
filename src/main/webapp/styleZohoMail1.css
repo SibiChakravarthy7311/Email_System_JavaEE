@@ -1,0 +1,717 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+.header_left img {
+    object-fit: contain;
+    height: 80px;
+    margin-left: 5px;
+    border-radius: 50%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: radial-gradient(#7c83e6, #240295);
+}
+
+.header_left {
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+}
+
+.header_left span {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.material-icons {
+    color: gray;
+}
+
+.header_middle {
+    display: flex;
+    flex: 0.45;
+    align-items: center;
+    background-color: rgb(216, 214, 214);
+    padding: 1%;
+    border-radius: 5px;
+    margin-left: 5%;
+}
+
+.header_middle input {
+    border: none;
+    width: 100%;
+    padding: 0.25%;
+    outline: none;
+    font-size: medium;
+    background-color: transparent;
+}
+
+.header_middle span {
+    cursor: default;
+}
+
+.header_right {
+    display: flex;
+    flex: 0.17;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_right .user-name{
+    font-weight: bold;
+    color: aliceblue;
+    margin-left: -10%;
+    margin-right: 10%;
+}
+
+.header_right .material-icons {
+    color: aliceblue;
+    cursor: pointer;
+    padding: 3%;
+    border-radius: 50%;
+}
+
+.header_right a{
+    padding: 2%;
+    border-radius: 50%;
+}
+
+.header_right a:hover,
+.header_right a:active,
+.header_right a:hover .material-icons,
+.header_right a:active .material-icons{
+    background-color: aliceblue;
+    color: gray;
+}
+
+.sidebar {
+    flex: 0.2;
+    max-width: 30%;
+    padding-right: 7%;
+    background: radial-gradient(#7c83e6, #240295);
+}
+
+.sidebar_compose {
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    border: 0.5px solid #240295;
+    border-radius: 30px;
+    display: flex;
+    padding: 2%;
+    margin: 5%;
+    text-transform: capitalize;
+    margin-bottom: 6%;
+}
+
+.sidebar button{
+    font-size: 1.1rem;
+}
+
+.sidebar button:hover,
+.sidebar button:active{
+    background-color: aliceblue;
+    border: 0.5px solid aliceblue;
+    box-shadow: 0px 2px 5px -2px aliceblue;
+}
+
+.sidebar_compose span {
+    margin-right: -3%;
+}
+
+.sidebar_share {
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    border: 0.5px solid #240295;
+    border-radius: 30px;
+    display: flex;
+    padding: 2%;
+    margin: 5%;
+    text-transform: capitalize;
+    margin-top: 6%;
+}
+
+.sidebar_share span {
+    margin-right: -3%;
+}
+
+.sidebarOption {
+    margin: 5%;
+    display: flex;
+    align-items: center;
+    height: 5%;
+    padding: 1% 2%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.sidebarOption .material-icons {
+    padding: 1%;
+    color: aliceblue;
+}
+
+.sidebarOption h3 {
+    flex: 1;
+    margin-left: 2%;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.sidebarOption:hover,
+.sidebarOption:hover h3,
+.sidebarOption:hover .material-icons,
+.sidebarOption:active,
+.sidebarOption:active h3,
+.sidebarOption:active .material-icons {
+    background-color: aliceblue;
+    color: gray;
+}
+
+a:link,
+a:visited{
+    /*color: rgba(242, 164, 74, 0.88);*/
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active{
+    color: rgba(255, 214, 107, 0.88);
+    border-bottom: 1px solid #240295;
+}
+
+.main_body {
+    display: flex;
+    height: 100vh;
+    background: #e7ebfc;
+}
+
+body {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.email_header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    background: #e7ebfc;
+    font-weight: bold;
+}
+
+.main_body_list_header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    background: #4567ff;
+    justify-content: flex-start;
+    padding-left: 2%;
+    color: aliceblue;
+}
+
+.emailList_sections{
+    display: flex;
+    background-color: #e7ebfc;
+    z-index: 10;
+    flex: 1;
+}
+
+.emailList_sections_id{
+    color: gray;
+    overflow: hidden;
+    margin-left: 4%;
+}
+
+.emailList_sections_from{
+    padding-left: 9%;
+    color: gray;
+    flex: 0.4;
+}
+
+.emailList_sections_content{
+    color: gray;
+    flex: 0.7;
+    align-items: center;
+}
+
+.emailList {
+    flex: 1;
+    overflow: scroll;
+}
+
+.emailRow {
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    border-radius: 20px;
+    border: solid 1px rgb(206, 204, 204);
+    cursor: pointer;
+    z-index: 999;
+    margin-bottom: 1%;
+    margin-right: 2%;
+    background: white;
+}
+
+.emailRow:hover {
+    border-top: 1px solid rgb(177, 177, 177);
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.35);
+}
+
+.emailRow_message {
+    display: flex;
+    flex: 0.7;
+    align-items: center;
+    font-size: 13px;
+}
+
+.emailRow_message h4 {
+    width: 95%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.emailRow_mail {
+    font-size: 13px;
+    flex: 0.2;
+    padding-left: 2%;
+}
+
+.emailRow_mail h3 {
+    font-size: 13px;
+}
+
+.emailRow_id {
+    margin-left: 2%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.emailRow_delete {
+    padding: 1%;
+    color: #818181;
+    cursor: default;
+}
+
+.sharedInboxList {
+    flex: 1;
+    overflow: scroll;
+    justify-content: center;
+}
+
+.sharedInboxList_list a{
+    color: #240295;
+}
+
+.sharedInboxList_list a:hover,
+.sharedInboxList_list a:active{
+    color: #000;
+}
+
+.sharedInboxRow {
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    border-radius: 20px;
+    border: solid 1px rgb(206, 204, 204);
+    cursor: pointer;
+    z-index: 999;
+    margin-bottom: 1%;
+    margin-right: 2%;
+    background: aliceblue;
+}
+
+.sharedInboxRow:hover {
+    border-top: 1px solid rgb(177, 177, 177);
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.35);
+}
+
+.sharedInboxRow_mail {
+    font-size: 13px;
+    flex: 0.8;
+    padding-left: 1%;
+}
+
+.sharedInboxRow_mail h3 {
+    font-size: 13px;
+}
+
+.sharedInboxRow_id {
+    flex: 0.1;
+    margin-left: 4%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sharedInboxRow_delete {
+    flex: 0.1;
+    padding: 1%;
+    color: #818181;
+    cursor: default;
+}
+
+.popup{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    justify-content: right;
+    display: none;
+}
+
+.popup-content{
+    height: 45%;
+    background-color: white;
+    align-self: flex-end;
+    margin-bottom: -1.5%;
+    position: relative;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 1%;
+    font-size: 4.5vh;
+    transform: rotate(45deg);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.share-inbox{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    justify-content: left;
+    display: none;
+}
+
+.share-inbox-content{
+    height: 35%;
+    background-color: white;
+    align-self: flex-end;
+    margin-bottom: -1.5%;
+    position: relative;
+}
+
+.create_account {
+    text-align: center;
+}
+
+.create_account h1 {
+    color: #240295;
+    border-bottom: 2px solid #180163;
+}
+
+label {
+    display: block;
+}
+
+.send {
+    border: 1px solid transparent;
+    padding: 2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: aliceblue;
+}
+
+.send div {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.send label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.send input {
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 2px solid black;
+}
+
+.send .send-message input{
+    width: 50vh;
+}
+
+.send .toMail input {
+    width: 40vh;
+}
+
+.send span{
+    margin-left: -3%;
+    color: #b6dbfc;
+}
+
+.send button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.popup button,
+.share-inbox button {
+    text-align: center;
+}
+
+.popup button,
+.share-inbox button {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.6rem;
+    margin-top: 1rem;
+    background-color: #3803e9;
+    border-radius: 1rem;
+    color: #fff;
+    border: 1px solid #180163;
+    cursor: pointer;
+}
+
+.popup button:hover,
+.popup button:active,
+.share-inbox button:hover,
+.share-inbox button:active{
+    background-color: #240295;
+}
+
+p{
+    text-align: center;
+    color: aliceblue;
+}
+
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+.successNotification {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    display: flex;
+}
+
+.successNotification-content {
+    transform: translateY(50%);
+    height: 12.6%;
+    background-color: white;
+    margin-bottom: -1.5%;
+    position: relative;
+    border-radius: 20px;
+}
+
+.successNotification-status {
+    text-align: center;
+    margin-top: 0%;
+}
+
+.successNotification-status h1 {
+    color: #08680c;
+    border-bottom: 2px solid #043907;
+}
+
+.successMessage {
+    border: 1px solid transparent;
+    padding: 1rem 2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: #e8fde9;
+    margin-top: 0.8%;
+}
+
+.successMessage h3 {
+    color: #032905;
+    margin-top: 3%;
+}
+
+.successNotification button {
+    text-align: center;
+}
+
+.successNotification button {
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.3rem;
+    background-color: #0da713;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid #032905;
+    cursor: pointer;
+    margin-top: 3%;
+}
+
+.successNotification button:hover,
+.successNotification button:active {
+    background-color: #08680c;
+}
+
+
+
+.warningNotification {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    display: flex;
+}
+
+.warningNotificationDelete {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    display: flex;
+}
+
+.warningNotification .warningNotification-content {
+    transform: translateY(50%);
+    height: 12%;
+    background-color: white;
+    margin-bottom: -1.5%;
+    position: relative;
+    border-radius: 20px;
+}
+
+.warningNotificationDelete .warningNotification-content {
+    transform: translateY(70%);
+    height: 12%;
+    background-color: white;
+    margin-bottom: -1.5%;
+    position: relative;
+    border-radius: 20px;
+    min-width: 200px;
+}
+
+.warningNotification-status {
+    text-align: center;
+    margin-top: 0;
+}
+
+.warningNotification-status h1 {
+    color: #fecf1f;
+    border-bottom: 2px solid #c79e01;
+}
+
+.warningMessage {
+    border: 1px solid transparent;
+    padding: 1rem 2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: #fff7d9;
+    margin-top: 0;
+}
+
+.warningMessage h3 {
+    color: #624d00;
+    margin-top: 2.7%;
+}
+
+.warningNotification button,
+.warningNotificationDelete button{
+    text-align: center;
+}
+
+.warningNotification button,
+.warningNotificationDelete button{
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.3rem;
+    background-color: #fed741;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid #b69001;
+    cursor: pointer;
+    margin-top: 3%;
+}
+
+.warningNotification button:hover,
+.warningNotification button:active {
+    background-color: #e9b901;
+}
+
+.warningNotificationDelete .cancel:hover,
+.warningNotificationDelete .cancel:active{
+    background-color: #e9b901;
+}
+
+.warningNotificationDelete .confirm:hover,
+.warningNotificationDelete .confirm:active{
+    background-color: #178902;
+}
+
+.warningNotification .btn,
+.successNotification .btn {
+    display: flex;
+    flex: 1;
+    justify-content: right;
+}
+
+.warningNotificationDelete .btn{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.warningNotification .btn button,
+.successNotification .btn button {
+    flex: 0.4;
+}
+
+.warningNotificationDelete .btn button,
+.warningNotificationDelete .btn a{
+    margin: 2%;
+    flex: 0.4;
+}
+
+.warningNotificationDelete .btn .cancel{
+    margin-right: 15px;
+}
+
+.warningNotification .close,
+.successNotification .close,
+.warningNotificationDelete .close{
+    position: absolute;
+    top: 0;
+    right: 1%;
+    font-size: 4.5vh;
+    transform: rotate(45deg);
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -1%;
+}
